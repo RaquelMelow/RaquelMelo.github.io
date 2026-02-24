@@ -1,0 +1,626 @@
+/* ESTILO DE SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ESTILOS GENERALES */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: rgb(239 239 226);
+    font-family: 'Archivo', sans-serif;
+}
+
+/* ESTILOS HEADER Y NAV */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    background-color: rgb(239 239 226);
+    border-radius: 32px;
+    border: 4px solid black;
+    margin: 0.5rem;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 1rem;
+        transition: color 0.3s;
+
+        ul {
+            list-style: none;
+
+            display: flex;
+            flex-direction: row;
+
+            gap: 2rem;
+
+            li a {
+                text-decoration: none;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: black;
+
+                &:hover {
+                    color: #FFB800;
+                    /* amarillo destacando */
+                    text-shadow: lightblue 0 0 10px;
+                }
+
+                &.active {
+                    color: #FF6F91;
+                    /* rosa coral al seleccionar */
+                    text-shadow: rgba(255, 111, 145, 0.3) 0 0 7px;
+                }
+            }
+        }
+    }
+}
+
+/* SEC INICIO */
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem;
+    margin: 6rem;
+
+    border-radius: 30px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 5px 5px 0px #000;
+    border-width: 8px 15px 15px 8px;
+
+    background-color: #FFB800;
+
+    @media (max-width: 768px) {
+        margin: 1rem;
+        padding: 3rem;
+    }
+}
+
+/* PARRAFOS INICIO */
+#inicio p {
+    margin: 0;
+    padding: 0;
+
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* ULTIMO PARRAFO */
+#inicio p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+/* PRIMER PARRAFO */
+#inicio p:first-of-type {
+    font-size: 3.5rem;
+}
+
+/* DIV NOMBRE */
+#name-div {
+    /* Ajuste de margen y ancho para que nunca toque los bordes del móvil */
+    margin: 10px auto;
+    width: 100%;
+    max-width: fit-content;
+
+    padding: 1.5rem;
+    /* Padding reducido para dar más aire al texto */
+    border-radius: 24px;
+    border: 4px solid black;
+    background-color: rgb(239, 239, 226);
+    text-align: center;
+    box-sizing: border-box;
+    /* Fundamental para que el padding no sume al ancho */
+
+
+
+    @media (min-width: 768px) {
+        padding: 2rem 3rem;
+    }
+
+    @media (min-width: 1025px) {
+        padding: 2rem 6rem;
+    }
+}
+
+#name-div h1 {
+    /* La letra nunca bajará de 1.8rem ni subirá de 6rem */
+    font-size: clamp(1.8rem, 8vw, 6rem);
+
+    margin: 0;
+    line-height: 1;
+    font-family: 'Dela Gothic One', cursive;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+
+    @media (max-width: 580px) {
+        font-size: 25px;
+    }
+
+}
+
+#name-div h1 span {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    color: #FFB800;
+    font-size: inherit;
+}
+
+/* SOBRE MI */
+
+#sobre-mi {
+    background-color: #ffc107;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* Alinea los elementos en vertical (título arriba, contenido abajo) */
+    align-items: flex-start;
+    /* Centra el título y el contenedor horizontalmente */
+    gap: 40px;
+    /* Espacio entre el h1 y el bloque de contenido */
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+
+
+
+/* Contenedor Principal Flex */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 2;
+}
+
+.section-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.title-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.title-box h1 {
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2rem;
+    background-color: #fff;
+    padding: 10px 40px;
+    border: 5px solid #000;
+    box-shadow: 10px 10px 0px #000;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* Caja Lila de Texto */
+.text-box {
+    background-color: #d1c4e9;
+    padding: 40px;
+    border: 4px solid #000;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px #000;
+}
+
+.text-box p {
+    color: #000;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.signature {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.photo-tags-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    gap: 20px;
+}
+
+/* Etiquetas Naranjas */
+.tags-container {
+    display: grid;
+    flex-direction: column;
+    gap: 15px;
+    width: -webkit-fill-available;
+}
+
+/* Estilo de cada etiqueta */
+.tag {
+    background-color: #ff7043;
+    /* Naranja */
+    color: #000;
+    padding: 12px 25px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 5px 5px 0px #000;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Foto Circular */
+.photo-circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 8px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.photo-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tags-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* --- VISTA MÓVIL (Menos de 900px) --- */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-column {
+        display: contents;
+        /* 🪄 MAGIA: Permite que el título y el texto se ordenen por separado */
+    }
+
+    .title-box {
+        order: 1;
+        /* 1º Título arriba */
+        margin-bottom: 10px;
+    }
+
+    .photo-tags-container {
+        order: 2;
+        /* 2º Foto debajo del título */
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-info {
+        order: 3;
+        /* 3º Texto lila al final */
+        width: 100%;
+    }
+}
+
+/* SECCIÓN PROYECTOS */
+#proyectos {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* LA TARJETA */
+.project-card {
+    background-color: white;
+    border: 5px solid black;
+    box-shadow: 12px 12px 0px black;
+    border-radius: 25px;
+    overflow: hidden;
+    /* Corta la imagen si sobresale */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+}
+
+/* Efecto al pasar el ratón */
+.project-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 18px 18px 0px black;
+}
+
+/* TÍTULO DEL PROYECTO (Encima de la foto) */
+.project-header {
+    text-decoration: none;
+    color: black;
+    background-color: #FFB800;
+    /* Amarillo vibrante */
+    padding: 15px;
+    border-bottom: 5px solid black;
+    text-align: center;
+}
+
+.project-header h2 {
+    font-family: 'Dela Gothic One', cursive;
+    margin: 0;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+/* CONTENEDOR DE IMAGEN (Aquí controlamos las imágenes grandes) */
+.project-img {
+    width: 100%;
+    height: 400px;
+    border-bottom: 5px solid black;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.05);
+}
+
+/* CONTENIDO DEBAJO (Descripción e Icono) */
+.project-info {
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.project-info p {
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* EL BOTÓN CON ICONO */
+.icon-link {
+    align-self: flex-start;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    background-color: #FF6F91;
+    padding: 10px 18px;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px black;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.icon-link:hover {
+    box-shadow: 0px 0px 0px black;
+    transform: translate(2px, 2px);
+}
+
+
+/* SECCIÓN CONTACTO */
+#contacto {
+    background-color: #d1c4e9;
+    /* Fondo lila */
+    border-top: 8px solid #000;
+    /* Borde negro grueso arriba */
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Reutilizamos el título blanco */
+#contacto .title-box h1 {
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2.5rem;
+    background-color: #fff;
+    padding: 15px 50px;
+    border: 5px solid #000;
+    box-shadow: 12px 12px 0px #000;
+    text-transform: uppercase;
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.contact-container {
+    width: 100%;
+    max-width: 600px;
+    /* Para que no sea demasiado ancho en PC */
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 40px;
+    border: 5px solid #000;
+    box-shadow: 15px 15px 0px #000;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ETIQUETAS E INPUTS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px;
+    border: 3px solid #000;
+    border-radius: 12px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    transition: all 0.2s;
+}
+
+/* Efecto al hacer clic en el input */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 5px 5px 0px #000;
+    transform: translate(-2px, -2px);
+}
+
+/* BOTÓN DE ENVÍO */
+.submit-btn {
+    background-color: #FFC527;
+    /* Amarillo para que destaque sobre el lila */
+    color: #000;
+    padding: 15px 30px;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 1.2rem;
+    border: 4px solid #000;
+    border-radius: 15px;
+    box-shadow: 6px 6px 0px #000;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 10px 10px 0px #000;
+    background-color: #FFB800;
+}
+
+.submit-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px #000;
+}
+
+/* Adaptación móvil */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 25px;
+    }
+
+    #contacto .title-box h1 {
+        font-size: 1.8rem;
+        padding: 10px 30px;
+    }
+}
+
+/* PIE DE PÁGINA */
+.main-footer {
+    background-color: rgb(239, 239, 226);
+    border-top: 8px solid #000;
+    padding: 50px 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.footer-socials {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-socials a {
+    color: #000;
+    font-size: 1.8rem;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000;
+    border-radius: 15px;
+    box-shadow: 6px 6px 0px #000;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer-socials a:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px #000;
+    background-color: #FF6F91;
+}
+
+.footer-socials a:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #000;
+}
+
+.main-footer p {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-family: 'Archivo', sans-serif;
+}
